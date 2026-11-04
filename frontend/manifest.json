@@ -1,0 +1,21 @@
+{
+  "name": "Study Hard AI",
+  "short_name": "Study Hard",
+  "description": "Твой личный ассистент для учёбы",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF6EE",
+  "theme_color": "#5C0A1F",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

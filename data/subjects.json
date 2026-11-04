@@ -1,0 +1,174 @@
+[
+  {
+    "id": "68cddd7b-795d-484c-9f20-20db9bacc882",
+    "name": "Canadian School",
+    "grades": [
+      {
+        "score": 9.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 9.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 9.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 9.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 8.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 8.0,
+        "max_score": 10.0,
+        "type": "formative"
+      }
+    ]
+  },
+  {
+    "id": "6c09ea20-d16b-4f22-86df-1d1956e03ee1",
+    "name": "kazak language",
+    "grades": [
+      {
+        "score": 9.0,
+        "max_score": 10.0,
+        "type": "formative"
+      }
+    ]
+  },
+  {
+    "id": "a5c26433-03e3-4355-a1a2-336aa037f4f6",
+    "name": "russian",
+    "grades": [
+      {
+        "score": 7.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 9.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 8.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 9.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 10.0,
+        "max_score": 15.0,
+        "type": "sor"
+      }
+    ]
+  },
+  {
+    "id": "12ab5310-7e6e-4fe2-85ae-d318cba67af9",
+    "name": "geography",
+    "grades": [
+      {
+        "score": 10.0,
+        "max_score": 10.0,
+        "type": "formative"
+      }
+    ]
+  },
+  {
+    "id": "252ae5fa-8d1d-4e18-887c-264f39a8642c",
+    "name": "algebra",
+    "grades": [
+      {
+        "score": 10.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 8.0,
+        "max_score": 10.0,
+        "type": "formative"
+      }
+    ]
+  },
+  {
+    "id": "a2d90026-3cfc-4149-90a8-aa8a93dce4c8",
+    "name": "world history",
+    "grades": [
+      {
+        "score": 8.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 10.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 10.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 10.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 9.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 14.0,
+        "max_score": 15.0,
+        "type": "sor"
+      }
+    ]
+  },
+  {
+    "id": "6566bc4a-1b48-4aa3-a8bc-ff36428ce89e",
+    "name": "основы права",
+    "grades": [
+      {
+        "score": 10.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 9.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 10.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 9.0,
+        "max_score": 10.0,
+        "type": "formative"
+      },
+      {
+        "score": 14.0,
+        "max_score": 15.0,
+        "type": "sor"
+      }
+    ]
+  }
+]

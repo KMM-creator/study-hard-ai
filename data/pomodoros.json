@@ -1,0 +1,44 @@
+[
+  {
+    "id": "e5a7dac4-71f9-4a58-be0c-2b66e11cd24f",
+    "subject_id": "5aaab6ca-09d7-4152-8a0b-e64386906c7a",
+    "subject_name": "math",
+    "date": "2026-10-17",
+    "created_at": "2026-10-17T01:09:43.598375"
+  },
+  {
+    "id": "c692c771-05dd-4e06-bb2a-5d901b112ef9",
+    "subject_id": "68cddd7b-795d-484c-9f20-20db9bacc882",
+    "subject_name": "Canadian School",
+    "date": "2026-10-31",
+    "created_at": "2026-10-31T19:52:17.694714"
+  },
+  {
+    "id": "af274a50-bd4c-4c92-b874-521c61e7bc34",
+    "subject_id": "68cddd7b-795d-484c-9f20-20db9bacc882",
+    "subject_name": "Canadian School",
+    "date": "2026-10-31",
+    "created_at": "2026-10-31T21:01:10.953058"
+  },
+  {
+    "id": "d323bba9-a812-4052-bfe8-471a18e7d7a4",
+    "subject_id": "68cddd7b-795d-484c-9f20-20db9bacc882",
+    "subject_name": "Canadian School",
+    "date": "2026-10-31",
+    "created_at": "2026-10-31T22:08:14.724626"
+  },
+  {
+    "id": "f353a101-9888-4673-82d7-97876e40a9ef",
+    "subject_id": "68cddd7b-795d-484c-9f20-20db9bacc882",
+    "subject_name": "Canadian School",
+    "date": "2026-10-31",
+    "created_at": "2026-10-31T23:03:33.611242"
+  },
+  {
+    "id": "c19e39e5-c9e0-4990-a80e-54098ebf26b9",
+    "subject_id": "6c09ea20-d16b-4f22-86df-1d1956e03ee1",
+    "subject_name": "kazak language",
+    "date": "2026-11-02",
+    "created_at": "2026-11-02T22:35:01.253986"
+  }
+]

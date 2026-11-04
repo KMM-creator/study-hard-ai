@@ -1,0 +1,6 @@
+{
+  "reminder_before_event": true,
+  "morning_summary": true,
+  "evening_goals_check": true,
+  "gpa_drop_warning": true
+}

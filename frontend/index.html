@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Hard</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#5C0A1F">
+    <link rel="stylesheet" href="/style.css?v=2">
+</head> 
+<body>
+    <header>
+        <div class="header-top">
+            <button id="menu-btn" class="menu-btn" title="Menu">&#8942;</button>
+            <h1>Study Hard</h1>
+            <div class="header-spacer"></div>
+        </div>
+        <nav>
+            <button class="tab active" data-tab="clock">Time</button>
+            <button class="tab" data-tab="calendar">Calendar</button>
+            <button class="tab" data-tab="grades">Grades</button>
+        </nav>
+
+                <div class="dropdown" id="dropdown">
+            <button class="dropdown-item" data-screen="goals">Goals</button>
+            <button class="dropdown-item" data-screen="stats">Statistics</button>
+            <button class="dropdown-item" data-screen="notifications">Notifications</button>
+            <button class="dropdown-item" data-screen="timer">Timer</button>
+            <button class="dropdown-item" data-screen="ai">Study AI ✨</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="clock" class="panel active">
+            <div class="big-clock" id="big-time">--:--:--</div>
+            <div class="date-line" id="big-date">loading...</div>
+            <div class="today-plans" id="today-plans"></div>
+        </section>
+
+        <section id="calendar" class="panel">
+            <div class="calendar-wrap">
+                <div class="calendar-main">
+                    <div class="calendar-header">
+                        <button id="prev-month">&#9664;</button>
+                        <h2 id="month-title">Month</h2>
+                        <button id="next-month">&#9654;</button>
+                    </div>
+                    <div class="calendar-grid" id="calendar-grid"></div>
+                </div>
+
+                <aside class="calendar-side">
+                    <h3 id="selected-date-title">Pick a day</h3>
+                    <form id="event-form">
+                        <input type="text" id="event-title"
+                               placeholder="Title (e.g. Math class)" required>
+                        <input type="time" id="event-time" required>
+                        <select id="event-type">
+                            <option value="study">Study</option>
+                            <option value="exam">Exam</option>
+                            <option value="personal">Personal</option>
+                            <option value="hobby">Hobby</option>
+                        </select>
+                        <button type="submit">Add</button>
+                    </form>
+                    <ul id="events-list"></ul>
+                </aside>
+            </div>
+        </section>
+
+        <section id="grades" class="panel">
+            <div class="grades-wrap">
+                <div class="grades-main">
+                    <div class="grades-header">
+                        <h2>Subjects</h2>
+                        <button id="clear-all-btn" class="clear-all-btn"
+                                title="Delete all subjects">Clear all</button>
+                    </div>
+
+                    <form id="subject-form">
+                        <input type="text" id="subject-name"
+                               placeholder="Name (e.g. Math)" required>
+                        <button type="submit">Add subject</button>
+                    </form>
+
+                    <div id="subjects-list" class="subjects-list"></div>
+                </div>
+
+                <aside class="grades-side">
+                    <h3>Overall GPA</h3>
+                    <div class="gpa-box">
+                        <div class="gpa-value" id="overall-gpa">&mdash;</div>
+                        <div class="gpa-label">out of 4.0</div>
+                    </div>
+                    <div class="gpa-hint" id="subjects-count">
+                        No subjects yet
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="goals" class="panel">
+            <div class="goals-wrap">
+                <div class="goals-main">
+                    <h2>Goals</h2>
+
+                    <form id="goal-form" class="goal-form">
+                        <input type="text" id="goal-title"
+                               placeholder="Goal (e.g. Learn 20 words)" required>
+                        <input type="date" id="goal-deadline" required>
+                        <input type="number" id="goal-target"
+                               placeholder="Target" value="20" min="1" required>
+                        <button type="submit">Add goal</button>
+                    </form>
+
+                    <div id="goals-list" class="goals-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATISTICS -->
+        <section id="stats" class="panel">
+            <div class="stats-wrap">
+                <div class="stats-main">
+                    <h2>Statistics</h2>
+
+                    <div class="stats-tabs">
+                        <button class="stats-tab active" data-stab="overview">Overview</button>
+                        <button class="stats-tab" data-stab="grades">Grades</button>
+                        <button class="stats-tab" data-stab="goals">Goals</button>
+                    </div>
+
+                    <div id="stab-overview" class="stab-panel active">
+                        <div class="stats-hero">
+                            <div class="stats-hero__value" id="stats-gpa">&mdash;</div>
+                            <div class="stats-hero__label">Overall GPA</div>
+                            <div class="stats-hero__hint" id="stats-gpa-hint">no data yet</div>
+                        </div>
+
+                        <div class="stats-kpis">
+                            <div class="kpi-card">
+                                <div class="kpi-card__value" id="kpi-subjects">0</div>
+                                <div class="kpi-card__label">Subjects</div>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-card__value" id="kpi-grades">0</div>
+                                <div class="kpi-card__label">Grades</div>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-card__value" id="kpi-avg10">&mdash;</div>
+                                <div class="kpi-card__label">Avg (of 10)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="stab-grades" class="stab-panel">
+                        <div class="chart-wrap">
+                            <div id="grades-chart" class="grades-chart"></div>
+                        </div>
+                    </div>
+
+                    <div id="stab-goals" class="stab-panel">
+                        <div class="goals-kpis">
+                            <div class="kpi-card">
+                                <div class="kpi-card__value" id="kpi-goals-active">0</div>
+                                <div class="kpi-card__label">Active</div>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-card__value" id="kpi-goals-completed">0</div>
+                                <div class="kpi-card__label">Completed</div>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-card__value" id="kpi-goals-overdue">0</div>
+                                <div class="kpi-card__label">Overdue</div>
+                            </div>
+                        </div>
+
+                        <div class="stats-overall-goals">
+                            <div class="stats-overall-goals__head">
+                                <span>Overall progress</span>
+                                <span id="overall-goals-count">0 / 0</span>
+                            </div>
+                            <div class="goal-bar">
+                                <div class="goal-bar__fill" id="overall-goals-fill" style="width:0%"></div>
+                            </div>
+                        </div>
+
+                        <div id="stats-goals-list" class="stats-goals-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOTIFICATIONS -->
+        <section id="notifications" class="panel">
+            <div class="notif-wrap">
+                <div class="notif-main">
+                    <h2>Notifications</h2>
+                    <p class="notif-subtitle">Choose what to be reminded about.</p>
+
+                    <div class="notif-list">
+                        <label class="notif-item">
+                            <input type="checkbox" id="notif-reminder">
+                            <div class="notif-item__text">
+                                <div class="notif-item__title">Reminder before event</div>
+                                <div class="notif-item__desc">15 minutes before each event</div>
+                            </div>
+                        </label>
+
+                        <label class="notif-item">
+                            <input type="checkbox" id="notif-morning">
+                            <div class="notif-item__text">
+                                <div class="notif-item__title">Morning summary</div>
+                                <div class="notif-item__desc">What's planned for today</div>
+                            </div>
+                        </label>
+
+                        <label class="notif-item">
+                            <input type="checkbox" id="notif-evening">
+                            <div class="notif-item__text">
+                                <div class="notif-item__title">Evening goals check-in</div>
+                                <div class="notif-item__desc">Update progress on your goals</div>
+                            </div>
+                        </label>
+
+                        <label class="notif-item">
+                            <input type="checkbox" id="notif-gpa">
+                            <div class="notif-item__text">
+                                <div class="notif-item__title">GPA drop warning</div>
+                                <div class="notif-item__desc">Alert if your GPA is going down</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="notif-status" id="notif-status"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMER -->
+        <section id="timer" class="panel">
+            <div class="timer-wrap">
+                <div class="timer-main">
+                    <div class="timer-mode" id="timer-mode">WORK</div>
+
+                    <div class="timer-display" id="timer-display">25:00</div>
+
+                    <div class="timer-subject">
+                        <label for="timer-subject-select">Working on:</label>
+                        <select id="timer-subject-select">
+                            <option value="">— pick a subject —</option>
+                        </select>
+                    </div>
+
+                    <div class="timer-controls">
+                        <button id="timer-start" class="timer-btn timer-btn--primary">Start</button>
+                        <button id="timer-pause" class="timer-btn">Pause</button>
+                        <button id="timer-reset" class="timer-btn">Reset</button>
+                    </div>
+
+                    <div class="timer-poms" id="timer-poms"></div>
+
+                    <div class="timer-hint" id="timer-hint">
+                        4 work sessions, then a long break
+                    </div>
+
+                    <!-- NEW: Today's Pomodoros -->
+                    <div class="pomodoro-today">
+                        <h3>Today's Pomodoros</h3>
+                        <div id="pomodoro-today-list" class="pomodoro-today-list">
+                            <div class="pomodoro-empty">No pomodoros yet today.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- AI CHAT -->
+        <section id="ai" class="panel">
+            <div class="ai-wrap">
+                <div class="ai-main">
+                    <h2>Study AI</h2>
+                    <p class="ai-subtitle">Ask me anything about your studies.</p>
+
+                    <div class="ai-chat-container" id="ai-chat-container">
+                        <div class="ai-message ai-message--bot">
+                            <div class="ai-avatar">🤖</div>
+                            <div class="ai-text">Привет! Я твой ИИ-ассистент. Я вижу твои оценки и цели. Спроси меня, что подтянуть, или как составить план подготовки!</div>
+                        </div>
+                    </div>
+
+                    <form id="ai-form" class="ai-form">
+                        <input type="text" id="ai-input" placeholder="Ask your question..." autocomplete="off" required>
+                        <button type="submit" id="ai-submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        </main>
+
+    <script src="/script.js?v=2"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(() => console.log('SW registered'))
+                .catch((err) => console.log('SW error:', err));
+        }
+    </script>
+</body>
+</html> 

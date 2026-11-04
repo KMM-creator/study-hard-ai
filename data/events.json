@@ -1,0 +1,58 @@
+[
+  {
+    "title": "physics",
+    "date": "2026-09-26",
+    "time": "14:15",
+    "type": "exam",
+    "id": "feb8a010-07af-4d04-b3d5-3d7149e94817"
+  },
+  {
+    "title": "Geometry",
+    "date": "2026-09-28",
+    "time": "14:15",
+    "type": "exam",
+    "id": "086d034d-c522-4366-bf92-7062921695f2"
+  },
+  {
+    "title": "no school today",
+    "date": "2026-09-26",
+    "time": "10:10",
+    "type": "study",
+    "id": "d1809d85-8991-4094-aaca-9579d8b1f321"
+  },
+  {
+    "title": "ai project/sturttup",
+    "date": "2026-09-26",
+    "time": "14:15",
+    "type": "hobby",
+    "id": "2bf73ab4-c13f-4235-a513-a64560459d9e"
+  },
+  {
+    "title": "brucs my teeth carefully",
+    "date": "2026-09-26",
+    "time": "22:05",
+    "type": "personal",
+    "id": "bec005bb-1ed0-4f8d-911f-811afdd97eb9"
+  },
+  {
+    "title": "drink tea",
+    "date": "2026-09-26",
+    "time": "18:00",
+    "type": "personal",
+    "id": "793bdf81-821d-43b1-94f5-1e141a8276d4"
+  },
+  {
+    "title": "art class",
+    "date": "2026-11-04",
+    "time": "15:00",
+    "type": "hobby",
+    "id": "c6a0e7d0-f26d-40ac-a495-b26003e54928"
+  },
+  {
+    "title": "take a shower",
+    "date": "2026-11-03",
+    "time": "23:15",
+    "type": "personal",
+    "id": "4da3f872-945b-4bb5-afe5-f460507e01c0"
+  }
+]
