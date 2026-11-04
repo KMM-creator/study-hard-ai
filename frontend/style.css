@@ -1576,3 +1576,111 @@ main { padding: 40px; }
     transition: 0.15s;
 }
 .add-grade-btn:hover { background: #7A1230; } 
+
+/* ============================================================
+   МОБИЛЬНАЯ ВЕРСИЯ (АДАПТИВ)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* Шапка */
+    header {
+        padding: 15px 20px;
+    }
+    .header-top {
+        margin-bottom: 10px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .menu-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    /* Основной контент */
+    main {
+        padding: 20px 15px;
+    }
+
+    /* Часы */
+    .big-clock {
+        font-size: 64px;
+        margin-top: 30px;
+    }
+    .date-line {
+        font-size: 16px;
+    }
+
+    /* Планы на сегодня (столбики) */
+    .today-plans {
+        grid-template-columns: 1fr 1fr; /* 2 колонки вместо 4 */
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    /* Календарь */
+    .calendar-wrap {
+        grid-template-columns: 1fr; /* Одна колонка */
+        gap: 15px;
+    }
+    .calendar-side {
+        padding: 15px;
+    }
+
+    /* Оценки */
+    .grades-wrap {
+        grid-template-columns: 1fr; /* Одна колонка */
+        gap: 15px;
+    }
+
+    /* Цели */
+    .goal-form {
+        grid-template-columns: 1fr; /* Поля друг под другом */
+        gap: 8px;
+    }
+
+    /* Статистика */
+    .stats-kpis {
+        grid-template-columns: 1fr; /* KPI друг под другом */
+    }
+    .goals-kpis {
+        grid-template-columns: 1fr;
+    }
+
+    /* Таймер */
+    .timer-display {
+        font-size: 80px;
+    }
+    .timer-btn {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+
+    /* ИИ Чат */
+    .ai-main {
+        padding: 15px;
+    }
+    .ai-text {
+        max-width: 100%; /* Чат на всю ширину */
+    }
+    .ai-form {
+        flex-direction: column; /* Кнопка под полем */
+    }
+    #ai-input {
+        width: 100%;
+    }
+    #ai-submit {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Форма добавления оценки */
+    .add-grade-form {
+        flex-direction: column;
+    }
+    .add-grade-form select,
+    .add-grade-form input,
+    .add-grade-btn {
+        width: 100%;
+    }
+} 
